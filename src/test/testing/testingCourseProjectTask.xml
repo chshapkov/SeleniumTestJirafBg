@@ -1,0 +1,30 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite thread-count="3" verbose="1" name="SeleniumTestsJirafBg"
+       annotations="JDK" parallel="tests">
+
+
+    <test name="LoginSuit" >
+        <classes>
+            <class name="tests.pom.login.LogInTestCorrectCredentials"/>
+            <class name="tests.pom.login.LogInTestWrongCredentials"/>
+        </classes>
+    </test>
+
+
+    <test name="AddToCartSuit">
+        <classes>
+            <class name="tests.pom.add.to.cart.AddToCart3ItemsFromHomePageAfterLogInItemFinalXpathProducts"/>
+            <class name="tests.pom.add.to.cart.AddToCart3ItemsFromHomePageAfterLogInItemCsv"/>
+        </classes>
+    </test>
+
+
+    <test name="CheckoutSuit">
+        <classes>
+            <class name="tests.pom.checkout.CheckOutWith6ProductsWithoutApprovalWindowAndCompletedOrderDetails"/>
+            <class name="tests.pom.checkout.CheckOutWith6ProductsWithoutApprovalWindowAndCompletedOrderDetailsWithLoginCatItemsCsv"/>
+        </classes>
+    </test>
+
+</suite>
